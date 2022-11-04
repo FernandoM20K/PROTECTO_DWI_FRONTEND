@@ -1,0 +1,21 @@
+@mixin scroll($color, $colorBarra, $colorHover, $width) {
+    &::-webkit-scrollbar{
+        background: $color;
+        width: $width;
+        border-radius: .5rem;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background: $colorBarra;
+        border-radius: .5rem;
+        &:hover , &:active {
+            background: $colorHover;
+        }
+    }
+}
+
+@mixin division-grid($particiones) {
+    display: grid;
+    grid-template-columns: $particiones;
+    gap: 1vw;
+}

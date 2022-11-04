@@ -1,0 +1,20 @@
+<div class="view-profesores">
+    <mat-card class="titulo-vista">
+        <mat-card-title>
+            Lista de Sedes
+        </mat-card-title>
+    </mat-card>
+
+    <div class="card card-profesor mb10" *ngFor="let p of profesores">
+        <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">{{ p.nombre }} {{ p.apellido }}</span></button>
+        <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Celular: {{ p.celular }}</span></button>
+        <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Email: {{ p.email }}</span></button>
+        <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Sueldo: {{ p.sueldo | currency: 'USD' }} </span></button>
+        <button mat-raised-button color="primary" class="w100" [routerLink]="'/admin/profesores/'+p.profesorId">Actualizar</button>
+        <button mat-raised-button color="warn" class="w100" (click)="eliminarProfesor(p.profesorId)">Eliminar</button>
+    </div>
+
+    <div class="cont-btn-agregar">
+        <button routerLink="/admin/add-profesor" mat-raised-button color="primary" class="btn-agregar">Agregar Profesor</button>
+    </div>
+</div>

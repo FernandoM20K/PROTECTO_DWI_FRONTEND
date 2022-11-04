@@ -1,0 +1,114 @@
+<mat-card class="card">
+    <h1>Actualizar Profesor</h1>
+    <div class="row">
+        <div>
+            <form (ngSubmit)="actualizarProfesor()">
+                <div class="card-grid-2">
+                    <mat-form-field class="w100" appearance="outline">
+                        <mat-label>Nombres</mat-label>
+                        <input
+                            [(ngModel)]="profesor.nombre"
+                            type="text"
+                            name="nombre"
+                            placeholder="Ingrese el Nombre del Profesor"
+                            matInput
+                            required
+                        >
+                    </mat-form-field>
+    
+                    <mat-form-field class="w100" appearance="outline">
+                        <mat-label>Apellidos</mat-label>
+                        <input
+                            [(ngModel)]="profesor.apellido"
+                            type="text"
+                            name="apellido"
+                            placeholder="Ingrese los apellidos del Profesor"
+                            matInput
+                            required
+                        >
+                    </mat-form-field>
+                </div>
+
+                <mat-form-field class="w100" appearance="outline">
+                    <mat-label>Dirección</mat-label>
+                    <input
+                        [(ngModel)]="profesor.direccion"
+                        type="text"
+                        name="direccion"
+                        placeholder="Ingrese la Dirección del Profesor"
+                        matInput
+                        required
+                    >
+                </mat-form-field>
+
+                <mat-form-field class="w100" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input
+                        [(ngModel)]="profesor.email"
+                        type="text"
+                        name="email"
+                        placeholder="Ingrese el Email del Profesor"
+                        matInput
+                        required
+                    >
+                </mat-form-field>
+
+                <div class="card-grid-2">
+                    <mat-form-field class="w100" appearance="outline">
+                        <mat-label>DNI</mat-label>
+                        <input
+                            [(ngModel)]="profesor.dni"
+                            type="number"
+                            name="dni"
+                            placeholder="Ingrese el dni del Profesor"
+                            matInput
+                            required
+                        >
+                    </mat-form-field>
+    
+                    <mat-form-field class="w100" appearance="outline">
+                        <mat-label>Nro. Celular</mat-label>
+                        <input
+                            [(ngModel)]="profesor.celular"
+                            type="number"
+                            name="celular"
+                            placeholder="Ingrese el número de celular del Profesor"
+                            matInput
+                            required
+                        >
+                    </mat-form-field>
+                </div>
+
+                <mat-form-field class="w100" appearance="outline">
+                    <mat-label>Género</mat-label>
+                    <mat-select name="genero" [(ngModel)]="profesor.genero">
+                        <mat-option value="M">Masculino</mat-option>
+                        <mat-option value="F">Femenino</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <div class="card-grid-2 align">
+                    <mat-form-field class="w100" appearance="outline">
+                        <mat-label>Sueldo</mat-label>
+                        <input
+                            [(ngModel)]="profesor.sueldo"
+                            type="number"
+                            name="sueldo"
+                            placeholder="Ingrese el Sueldo del Profesor"
+                            matInput
+                            required
+                        >
+                    </mat-form-field>
+    
+                    <mat-slide-toggle [checked]="false" name="estado" [(ngModel)]="profesor.estado" color="primary">
+                        Estado
+                    </mat-slide-toggle>
+                </div>
+
+                <div class="cont-center">
+                    <button mat-raised-button color="primary">Actualizar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</mat-card>

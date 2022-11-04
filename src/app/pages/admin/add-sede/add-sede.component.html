@@ -1,0 +1,46 @@
+<mat-card class="card">
+    <h1>Agregar Nueva Sede</h1>
+    <div class="row">
+        <div>
+            <form (ngSubmit)="guardarSede()">
+                <mat-form-field class="w100" appearance="outline">
+                    <mat-label>Nombre de la Sede</mat-label>
+                    <input
+                        [(ngModel)]="sede.nombre"
+                        type="text"
+                        name="nombre"
+                        placeholder="Ingrese el Nombre de la Sede"
+                        matInput
+                        required
+                    >
+                </mat-form-field>
+
+                <mat-form-field class="w100" appearance="outline">
+                    <mat-label>Dirección</mat-label>
+                    <input
+                        [(ngModel)]="sede.direccion"
+                        type="text"
+                        name="direccion"
+                        placeholder="Ingrese la dirección de la Sede"
+                        matInput
+                    >
+                </mat-form-field>
+
+                <mat-form-field class="w100" appearance="outline">
+                    <mat-label>Teléfono</mat-label>
+                    <input
+                        [(ngModel)]="sede.telefono"
+                        type="number"
+                        name="telefono"
+                        placeholder="Ingrese el telefono de la Sede"
+                        matInput
+                    >
+                </mat-form-field>
+
+                <div class="cont-center">
+                    <button mat-raised-button color="primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</mat-card>

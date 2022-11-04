@@ -1,0 +1,18 @@
+<div class="view-profesores">
+    <mat-card class="titulo-vista">
+        <mat-card-title>
+            Lista de Cursos
+        </mat-card-title>
+    </mat-card>
+
+    <div class="card card-curso mb10" *ngFor="let c of cursos">
+        <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Nombre: {{ c.nombre }}</span></button>
+        <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Horas Semanales: {{ c.horasSemanales }}</span></button>
+        <button mat-raised-button color="primary" class="w100" [routerLink]="'/admin/cursos/'+c.cursoId">Actualizar</button>
+        <button mat-raised-button color="warn" class="w100" (click)="eliminarCurso(c.cursoId)">Eliminar</button>
+    </div>
+
+    <div class="cont-btn-agregar">
+        <button routerLink="/admin/add-curso" mat-raised-button color="primary" class="btn-agregar">Agregar  Curso</button>
+    </div>
+</div>

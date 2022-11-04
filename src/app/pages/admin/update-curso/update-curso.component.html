@@ -1,0 +1,35 @@
+<mat-card class="card">
+    <h1>Actualizar Curso</h1>
+    <div class="row">
+        <div>
+            <form (ngSubmit)="actualizarCurso()">
+                <mat-form-field class="w100" appearance="outline">
+                    <mat-label>Nombre del Curso</mat-label>
+                    <input
+                        [(ngModel)]="curso.nombre"
+                        type="text"
+                        name="nombre"
+                        placeholder="Ingrese el Nombre del Curso"
+                        matInput
+                        required
+                    >
+                </mat-form-field>
+
+                <mat-form-field class="w100" appearance="outline">
+                    <mat-label>Horas Academicas Semanales</mat-label>
+                    <input
+                        [(ngModel)]="curso.horasSemanales"
+                        type="number"
+                        name="horasSemanales"
+                        placeholder="Ingrese las horas semanales academicas del Curso"
+                        matInput
+                    >
+                </mat-form-field>
+ 
+                <div class="cont-center">
+                    <button mat-raised-button color="primary">Actualizar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</mat-card>

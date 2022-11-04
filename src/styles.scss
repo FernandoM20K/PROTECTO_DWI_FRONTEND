@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import '_variables';
+@import '_mixins';
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $bg-dashboard;
+
+    @include scroll($bg-dashboard, $scroll-thumb, $scroll-hover, .9rem);
+}
+
+.w100 {
+    width: 100%;
+}
+

@@ -1,0 +1,12 @@
+@import '_variables';
+
+.header {
+    background-color: $header-admin;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}

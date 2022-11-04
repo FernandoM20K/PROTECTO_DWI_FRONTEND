@@ -1,0 +1,20 @@
+@import '_variables';
+@import '_mixins';
+
+.sidebar { //MODIFICAR ALGUNAS COSAS
+    background-color: $sidebar;
+    color: $colortexto;
+    max-height: calc(100vh - 60px);
+    min-height: calc(100vh - 60px);
+    overflow-y: auto;
+    width: 17%;
+    position: fixed;
+    bottom: 0;
+    border-radius: 0;
+
+    @include scroll($sidebar, $scroll-thumb, $scroll-hover, .7rem);
+
+    &-btn {
+        color: $colortexto;
+    }
+}
