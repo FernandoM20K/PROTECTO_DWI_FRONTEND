@@ -10,6 +10,12 @@
         <button class="sidebar-btn" mat-list-item [routerLink]="'/user/mensajes/recibidos/'+user.usuarioId">
             <mat-icon mat-list-icon>sms_failed</mat-icon> Mensajes Recibidos
         </button>
+        <button class="sidebar-btn" mat-list-item [routerLink]="'/user/mensajes/enviados/'+user.usuarioId">
+            <mat-icon mat-list-icon>sms_failed</mat-icon> Mensajes Enviados
+        </button>
+        <button class="sidebar-btn" mat-list-item [routerLink]="'/user/mensaje/redactar/'+user.usuarioId">
+            <mat-icon mat-list-icon>sms_failed</mat-icon> Redactar Mensaje
+        </button>
         <button class="sidebar-btn" mat-list-item routerLink="/admin/cursos">
             <mat-icon mat-list-icon>logout</mat-icon> Cerrar Sesión
         </button>

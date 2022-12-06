@@ -13,5 +13,9 @@ export class UsuariosService {
     return this.http.post(`${baserUrl}/usuarios/`,user)
   }
 
+  public listarUsuariosXFuncion(funcion:any) {
+    return this.http.get(`${baserUrl}/usuarios/?funcion=${funcion}`)
+  }
+
 }
 

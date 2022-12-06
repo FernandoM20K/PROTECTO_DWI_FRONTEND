@@ -28,8 +28,10 @@ import { LoginComponent } from './pages/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { DashboardUserComponent } from './pages/user/dashboard-user/dashboard-user.component';
+import { RedactarMensajeComponent } from './pages/user/redactar-mensaje/redactar-mensaje.component';
 import { ViewCursosXEstudianteComponent } from './pages/user/view-cursos-x-estudiante/view-cursos-x-estudiante.component';
 import { ViewEstudiantesXApoderadoComponent } from './pages/user/view-estudiantes-x-apoderado/view-estudiantes-x-apoderado.component';
+import { ViewMensajesEnvidadosComponent } from './pages/user/view-mensajes-envidados/view-mensajes-envidados.component';
 import { ViewMensajesRecibidosComponent } from './pages/user/view-mensajes-recibidos/view-mensajes-recibidos.component';
 import { ViewNotasXEstudianteComponent } from './pages/user/view-notas-x-estudiante/view-notas-x-estudiante.component';
 import { AdminGuard } from './services/login/admin.guard';
@@ -170,6 +172,18 @@ const routes: Routes = [
       {
         path : 'mensajes/recibidos/:usuarioId',
         component : ViewMensajesRecibidosComponent
+      },
+      {
+        path : 'mensajes/enviados/:usuarioId',
+        component : ViewMensajesEnvidadosComponent
+      },
+      {
+        path : 'mensaje/redactar/:usuarioId',
+        component : RedactarMensajeComponent
+      },
+      {
+        path : 'mensaje/view/:mensajeId',
+        component : RedactarMensajeComponent
       },
     ]
   }

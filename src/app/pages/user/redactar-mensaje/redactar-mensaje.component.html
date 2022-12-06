@@ -1,0 +1,39 @@
+<div class="view-profesores">
+    <mat-card class="titulo-vista">
+        <mat-card-title>
+            Redactar Mensaje
+        </mat-card-title>
+    </mat-card>
+
+    <form (ngSubmit)="guardarProfesor()">
+        <div class="card card-mensaje-r mb20">
+
+            <!-- <input type="hidden" [value]="1" [(ngModel)]="mensaje.usuarioEnvio.usuarioId"> -->
+    
+            <mat-form-field class="w100" appearance="outline">
+                <mat-label>Mensaje</mat-label>
+                <textarea
+                    [(ngModel)]="mensaje.mensaje"
+                    type="text"
+                    name="mensaje"
+                    placeholder="Redacte el mensaje a enviar"
+                    matInput
+                    rows="18"
+                ></textarea>
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline" class="w100">
+                <mat-label>Profesor a Enviar el Mensaje</mat-label>
+                <mat-select name="usuarioRecepcion" [(ngModel)]="mensaje.usuarioRecepcion.usuarioId">
+                    <mat-option *ngFor="let p of profesores" [value]="p.usuarioId">
+                        {{ p.nombre }} {{ p.apellido }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="cont-center">
+            <button mat-raised-button color="primary">Enviar Mensaje</button>
+        </div>
+    </form>
+</div>

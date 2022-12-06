@@ -59,6 +59,9 @@ import { DashboardUserComponent } from './pages/user/dashboard-user/dashboard-us
 import { SidebarUserComponent } from './pages/user/sidebar-user/sidebar-user.component';
 import { ViewCursosXEstudianteComponent } from './pages/user/view-cursos-x-estudiante/view-cursos-x-estudiante.component';
 import { ViewMensajesRecibidosComponent } from './pages/user/view-mensajes-recibidos/view-mensajes-recibidos.component';
+import { ViewMensajesEnvidadosComponent } from './pages/user/view-mensajes-envidados/view-mensajes-envidados.component';
+import { RedactarMensajeComponent } from './pages/user/redactar-mensaje/redactar-mensaje.component';
+import { ViewMensajeComponent } from './pages/user/view-mensaje/view-mensaje.component';
 
 @NgModule({
   declarations: [
@@ -103,6 +106,9 @@ import { ViewMensajesRecibidosComponent } from './pages/user/view-mensajes-recib
     SidebarUserComponent,
     ViewCursosXEstudianteComponent,
     ViewMensajesRecibidosComponent,
+    ViewMensajesEnvidadosComponent,
+    RedactarMensajeComponent,
+    ViewMensajeComponent,
   ],
   imports: [
     BrowserModule,
