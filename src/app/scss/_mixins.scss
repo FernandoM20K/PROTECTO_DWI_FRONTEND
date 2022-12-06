@@ -19,3 +19,20 @@
     grid-template-columns: $particiones;
     gap: 1vw;
 }
+
+@mixin boton($bgColor, $display, $border-radius) {
+    background-color: $bgColor;
+    color: $colortexto;
+    font-weight: bold;
+    border-radius: $border-radius;
+    text-decoration: none;
+    padding: .3rem 2rem;
+    text-align: center;
+    display: $display;
+    border: none;
+
+    &:hover {
+        background-color: darken($bgColor, 8);
+        cursor: pointer;
+    }
+}

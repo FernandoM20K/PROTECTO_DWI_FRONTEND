@@ -105,6 +105,15 @@
                     </mat-slide-toggle>
                 </div>
 
+                <mat-form-field appearance="outline" class="w100">
+                    <mat-label>Sede</mat-label>
+                    <mat-select name="salon" [(ngModel)]="profesor.sede.sedeId">
+                        <mat-option *ngFor="let s of sedes" [value]="s.sedeId">
+                            {{ s.nombre }} / {{ s.direccion }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
                 <div class="cont-center">
                     <button mat-raised-button color="primary">Guardar</button>
                 </div>

@@ -1,7 +1,8 @@
 @import '_variables';
+@import '_cont-btn';
 
 .header {
-    background-color: $header-admin;
+    background-color: $tercero;
     height: 60px;
     position: sticky;
     top: 0;
@@ -9,4 +10,10 @@
     display: flex;
     justify-content: space-between;
     z-index: 1000;
+}
+
+.logo {
+    height: 60px;
+    filter: invert(62%) sepia(48%) saturate(4034%) hue-rotate(81deg) brightness(110%) contrast(91%);
+    // filter: invert(99%) sepia(94%) saturate(544%) hue-rotate(55deg) brightness(99%) contrast(90%);
 }

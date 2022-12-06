@@ -1,0 +1,15 @@
+<div class="view-profesores">
+    <mat-card class="titulo-vista">
+        <mat-card-title>
+            Lista de Mensajes Recibidos
+        </mat-card-title>
+    </mat-card>
+
+    <div class="card card-mensaje mb20" *ngFor="let m of mensajesRecibidos">
+        <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Persona Envio: </span>{{ m.usuarioEnvio.nombre }} {{ m.usuarioEnvio.apellido }}</button>
+        <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Fecha Envio: </span>{{m.fechaEnvio}}</button>
+        <button mat-raised-button color="primary" class="w100 btn-view-lista" [routerLink]="'/user/mensajes/'+m.mensajeId">Ver Mensaje</button>
+        <button mat-stroked-button color="primary" class="w100 btn-view div3"><span class="bold">Mensaje: </span>{{m.mensaje}}</button>
+    </div>
+
+</div>

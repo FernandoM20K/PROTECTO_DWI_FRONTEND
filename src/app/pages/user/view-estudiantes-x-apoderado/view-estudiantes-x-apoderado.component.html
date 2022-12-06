@@ -7,11 +7,11 @@
 
     <div class="card card-estudiante-apoderado mb10" *ngFor="let e of estudiantes">
         <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">{{ e.nombre }} {{ e.apellido }}</span></button>
-        <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Género: {{e.genero}}</span></button>
-        <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Grado/Seccion: {{e.salon.grado}} / "{{e.salon.seccion}}"</span></button>
+        <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Género: </span>{{e.genero}}</button>
+        <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Grado/Seccion: </span>{{e.salon.grado}} / "{{e.salon.seccion}}"</button>
         <button mat-stroked-button color="primary" class="w100 btn-view-green" *ngIf="e.estado"><span class="bold">Activo</span></button>
         <button mat-stroked-button color="primary" class="w100 btn-view-red" *ngIf="!e.estado"><span class="bold">Inactivo</span></button>
-        <button mat-raised-button color="primary" class="w100" [routerLink]="'/admin/estudiantes/notas/'+e.estudianteId">Ver Notas</button>
+        <button mat-raised-button color="primary" class="w100 btn-view-lista" [routerLink]="'/user/estudiantes/cursos/'+e.estudianteId">Ver Cursos</button>
     </div>
 
 </div>

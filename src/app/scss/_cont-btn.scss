@@ -26,6 +26,13 @@
         overflow: hidden;
     }
 
+    &-notas {
+        display: grid;
+        gap: 10px;
+        padding: 10px 400px;
+        
+    }
+
     &-profesor {
         display: grid;
         grid-template-columns: 1.8fr 1.3fr 3fr 1.3fr .7fr .7fr;
@@ -40,6 +47,24 @@
         gap: 10px
     }
 
+    &-cursoVenta {
+        display: grid;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    &-mensaje {
+        padding: 10px;
+        @include division-grid(repeat(2, 1fr) 0.5fr);
+
+        .div3 {
+            grid-area: 2 / 1 / 3 / 4; 
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+
     &-grid {
         &-2 {
             @include division-grid(repeat(2, 1fr));
@@ -52,6 +77,26 @@
     &-header {
         color: $colortexto;
     }
+
+    &-estudiante-apoderado {
+        display: grid;
+        grid-template-columns: 3fr 2fr 1fr 1fr 1fr;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    &-login {
+        margin: 40px auto;
+        width: 30vw;
+        padding: 20px;
+        text-align: center;
+        color: $colortexto;
+        justify-content: center;
+    }
+}
+
+.hint {
+    color: $colortexto;
 }
 
 .align {
@@ -97,20 +142,42 @@
         background-color: $btn-actualizar;
     }
 
+    &-nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
     &-view {
-        border: 1px solid $borde-btn-view;
-        color: $borde-btn-view;
+        border: 1px solid $ligthsalmon;
+        color: $ligthsalmon;
         text-overflow: ellipsis;
         white-space: normal;
         overflow: hidden;
+
+        &-green {
+            border: 1px solid $borde-btn-view;
+            color: $borde-btn-view;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        &-lista {
+            background-color: $header-admin;
+        }
+
+        &-red {
+            border: 1px solid $btn-eliminar;
+            color: $btn-eliminar;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
     }
 }
 
 .interlineado25 {
     line-height : 25px;
 }
-
-.center
 
 .cont {
     &-center {

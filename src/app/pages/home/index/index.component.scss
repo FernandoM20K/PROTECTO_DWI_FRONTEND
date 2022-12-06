@@ -1,0 +1,14 @@
+@import '_variables';
+@import '_paginaWeb';
+@import '_cont-btn';
+@import '_globales';
+@import '_botones';
+
+.titulo-df {
+    background-color: $btn-actualizar;
+    margin: 50px;
+}
+
+.c-green {
+    background-color: $btn-agregar;
+}

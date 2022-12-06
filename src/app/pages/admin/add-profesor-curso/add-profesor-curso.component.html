@@ -1,0 +1,31 @@
+<mat-card class="card">
+    <h1>Asignar Curso a Profesor</h1>
+    <div class="row">
+        <div>
+            <form (ngSubmit)="guardarProfesorCurso()">
+
+                <mat-form-field appearance="outline" class="w100">
+                    <mat-label>Cursos</mat-label>
+                    <mat-select name="salon" [(ngModel)]="profesorCurso.curso.cursoId">
+                        <mat-option *ngFor="let c of cursos" [value]="c.cursoId">
+                            {{ c.nombre }} / {{ c.horasSemanales }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w100">
+                    <mat-label>Profesores</mat-label>
+                    <mat-select name="salon" [(ngModel)]="profesorCurso.profesor.profesorId">
+                        <mat-option *ngFor="let p of profesores" [value]="p.profesorId">
+                            {{ p.nombre }} {{ p.apellido }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <div class="cont-center">
+                    <button mat-raised-button color="primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</mat-card>

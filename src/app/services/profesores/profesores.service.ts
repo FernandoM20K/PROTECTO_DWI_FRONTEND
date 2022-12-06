@@ -13,6 +13,10 @@ export class ProfesoresService {
     return this.http.get(`${baserUrl}/profesor/`);
   }
 
+  public listarProfesoresXsede(profesorId:any) {
+    return this.http.get(`${baserUrl}/profesor/sede/profesores/${profesorId}`);
+  }
+
   public agregarProfesor(profesor:any) {
     return this.http.post(`${baserUrl}/profesor/`,profesor);
   }

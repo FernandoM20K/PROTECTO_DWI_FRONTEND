@@ -1,1 +1,30 @@
-<p>view-notas-x-estudiante works!</p>
+<div class="view-profesores">
+    <mat-card class="titulo-vista">
+        <mat-card-title>
+            Notas del Alumno: {{estudianteCurso.estudiante.nombre}} {{estudianteCurso.estudiante.apellido}} 
+        </mat-card-title>
+    </mat-card>
+
+    <div class="card-grid-1">
+        <div class="card card-notas mb10">
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Profesor: </span>{{ estudianteCurso.profesorCurso.profesor.nombre }} {{ estudianteCurso.profesorCurso.profesor.apellido }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Curso: </span>{{ estudianteCurso.profesorCurso.curso.nombre }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Nota NA 1: </span>{{ estudianteCurso.na1 }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Nota NA 1: </span>{{ estudianteCurso.na2 }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Nota NA 1: </span>{{ estudianteCurso.na3 }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Nota NA 1: </span>{{ estudianteCurso.na4 }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Promedio NA: </span>{{ estudianteCurso.promedioNa }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Nota NB 1: </span>{{ estudianteCurso.nb1 }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Nota NB 1: </span>{{ estudianteCurso.nb2 }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Nota NB 1: </span>{{ estudianteCurso.nb3 }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Nota NB 1: </span>{{ estudianteCurso.nb4 }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Promedio NB: </span>{{ estudianteCurso.promedioNb }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Nota NC 1: </span>{{ estudianteCurso.nc1 }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Nota NC 1: </span>{{ estudianteCurso.nc2 }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Nota NC 1: </span>{{ estudianteCurso.nc3 }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Nota NC 1: </span>{{ estudianteCurso.nc4 }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Promedio NC: </span>{{ estudianteCurso.promedioNc }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Promedio Final: </span>{{ estudianteCurso.promedioFinal }}</button>
+        </div>
+    </div>
+</div>

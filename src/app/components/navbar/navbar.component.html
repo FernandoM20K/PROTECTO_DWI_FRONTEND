@@ -1,19 +1,21 @@
 <mat-toolbar color="primary" class="header">
     <a [routerLink]="'/'" mat-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <fa-icon [icon]="snowIcon"></fa-icon> Systematic
+        <img src="./../../../../assets/img/DF.svg" alt="imagenlogo" class="logo">
     </a>
 
-    <div>
+    <div class="btn-nav">
         <a 
-        [routerLink]="'/login'" 
-        mat-button 
-        class="example-icon favorite-icon" 
-        aria-label="Example icon-button with heart icon"
+            *ngIf="!isLoggedIn" 
+            [routerLink]="'/login'" 
+            mat-button 
+            class="example-icon favorite-icon" 
+            aria-label="Example icon-button with heart icon"
         >
             Iniciar Sesión
         </a>
 
         <a 
+            *ngIf="!isLoggedIn" 
             [routerLink]="'/signup'" 
             mat-button 
             class="example-icon favorite-icon" 
@@ -21,5 +23,32 @@
         >
             Registrar
         </a>
+        <a 
+            *ngIf="isLoggedIn" 
+            [routerLink]="'/user'" 
+            mat-button 
+            class="example-icon favorite-icon" 
+            aria-label="Example icon-button with heart icon"
+        >
+            Portal Estudiante
+        </a>
+        <a 
+            *ngIf="isLoggedIn" 
+            (click)="logout()"
+            mat-button 
+            class="example-icon favorite-icon" 
+            aria-label="Example icon-button with heart icon"
+        >
+            Cerrar Sesión
+        </a>
+        <button
+            *ngIf="isLoggedIn && user" 
+            mat-button 
+            class="example-icon favorite-icon"
+            routerLink="/admin/profile" 
+            aria-label="Example icon-button with heart icon"
+        >
+            {{ user.nombre }} {{ user.apellido }}
+        </button>
     </div>
 </mat-toolbar>

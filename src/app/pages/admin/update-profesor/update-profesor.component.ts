@@ -27,6 +27,7 @@ export class UpdateProfesorComponent implements OnInit {
         console.log(this.profesor);
       }, (error) => {
         console.log(error);
+        Swal.fire('Error','Error al cargar los profesores de la sede Seleccionada','error');
       }
     )
   }

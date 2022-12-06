@@ -1,0 +1,45 @@
+<mat-card class="card">
+    <h1>Agregar Nuevo Salon</h1>
+    <div class="row">
+        <div>
+            <form (ngSubmit)="actualizarSalon()">
+                <mat-form-field class="w100" appearance="outline">
+                    <mat-label>Grado</mat-label>
+                    <input
+                        [(ngModel)]="salon.grado"
+                        type="number"
+                        name="grado"
+                        placeholder="Ingrese el Grado al cual sera asignado el salon"
+                        matInput
+                        required
+                    >
+                </mat-form-field>
+
+                <mat-form-field class="w100" appearance="outline">
+                    <mat-label>Sección</mat-label>
+                    <input
+                        [(ngModel)]="salon.seccion"
+                        type="text"
+                        name="seccion"
+                        placeholder="Ingrese la Seccion al cual sera arginado el salon"
+                        matInput
+                    >
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w100">
+                    <mat-label>Sede</mat-label>
+                    <mat-select name="sede" [(ngModel)]="salon.sede.sedeId">
+                        <mat-option *ngFor="let s of sedes" [value]="s.sedeId">
+                            {{ s.nombre }} / {{ s.direccion }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <div class="cont-center">
+                    <button mat-raised-button color="primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</mat-card>
+

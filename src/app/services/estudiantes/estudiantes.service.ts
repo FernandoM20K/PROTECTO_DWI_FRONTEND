@@ -13,6 +13,10 @@ export class EstudiantesService {
     return this.http.get(`${baserUrl}/estudiante/`);
   }
 
+  public listarEstudiantesXsede(salonId:any) {
+    return this.http.get(`${baserUrl}/estudiante/salon/estudiantes/${salonId}`);
+  }
+
   public agregarEstudiante(estudiante:any) {
     return this.http.post(`${baserUrl}/estudiante/`,estudiante);
   }
@@ -27,5 +31,9 @@ export class EstudiantesService {
 
   public actualizarEstudiante(estudiante:any) {
     return this.http.put(`${baserUrl}/estudiante/`,estudiante);
+  }
+
+  public listarEstudiantesXApoderado(apoderadoId:any) {
+    return this.http.get(`${baserUrl}/estudiante/apoderado/${apoderadoId}`);
   }
 }

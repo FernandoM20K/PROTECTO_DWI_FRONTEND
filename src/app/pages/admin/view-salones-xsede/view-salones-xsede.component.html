@@ -1,0 +1,20 @@
+<div class="view-profesores">
+    <mat-card class="titulo-vista">
+        <mat-card-title>
+            Lista de Salones
+        </mat-card-title>
+    </mat-card>
+
+    <div class="card card-profesor mb10" *ngFor="let s of salones">
+        <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Grado: {{ s.grado }}</span></button>
+        <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Sección: {{ s.seccion }}</span></button>
+        <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Salon: {{ s.sede.nombre }} {{ s.sede.direccion }}</span></button>
+        <button mat-raised-button color="primary" class="w100 btn-view btn-view-green" [routerLink]="'/admin/estudiantes/salon/'+s.salonId"><span class="bold">Listar Alumnos</span></button>
+        <button mat-raised-button color="primary" class="w100" [routerLink]="'/admin/salones/'+s.salonId">Actualizar</button>
+        <button mat-raised-button color="warn" class="w100" (click)="eliminarSalon(s.salonId)">Eliminar</button>
+    </div>
+
+    <div class="cont-btn-agregar">
+        <button routerLink="/admin/add-salon" mat-raised-button color="primary" class="btn-agregar">Agregar Salon</button>
+    </div>
+</div>

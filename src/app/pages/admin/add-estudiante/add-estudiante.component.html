@@ -1,1 +1,96 @@
-<p>add-estudiante works!</p>
+<mat-card class="card">
+    <h1>Agregar Nuevo Estudiante</h1>
+    <div class="row">
+        <div>
+            <form (ngSubmit)="guardarEstudiante()">
+                <div class="card-grid-2">
+                    <mat-form-field class="w100" appearance="outline">
+                        <mat-label>Nombres</mat-label>
+                        <input
+                            [(ngModel)]="estudiante.nombre"
+                            type="text"
+                            name="nombre"
+                            placeholder="Ingrese el Nombre del Estudiante"
+                            matInput
+                            required
+                        >
+                    </mat-form-field>
+    
+                    <mat-form-field class="w100" appearance="outline">
+                        <mat-label>Apellidos</mat-label>
+                        <input
+                            [(ngModel)]="estudiante.apellido"
+                            type="text"
+                            name="apellido"
+                            placeholder="Ingrese los apellidos del Estudiante"
+                            matInput
+                            required
+                        >
+                    </mat-form-field>
+                </div>
+
+                <mat-form-field class="w100" appearance="outline">
+                    <mat-label>Dirección</mat-label>
+                    <input
+                        [(ngModel)]="estudiante.direccion"
+                        type="text"
+                        name="direccion"
+                        placeholder="Ingrese la Dirección del Estudiante"
+                        matInput
+                        required
+                    >
+                </mat-form-field>
+
+                <div class="card-grid-2">
+                    <mat-form-field class="w100" appearance="outline">
+                        <mat-label>DNI</mat-label>
+                        <input
+                            [(ngModel)]="estudiante.dni"
+                            type="number"
+                            name="dni"
+                            placeholder="Ingrese el dni del Profesor"
+                            matInput
+                            required
+                        >
+                    </mat-form-field>
+    
+                    <mat-form-field class="w100" appearance="outline">
+                        <mat-label>Género</mat-label>
+                        <mat-select name="genero" [(ngModel)]="estudiante.genero">
+                            <mat-option value="M">Masculino</mat-option>
+                            <mat-option value="F">Femenino</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <mat-form-field appearance="outline" class="w100">
+                    <mat-label>Sede</mat-label>
+                    <mat-select name="salon">
+                        <mat-option *ngFor="let s of sedes" [value]="s.sedeId">
+                            {{ s.nombre }} / {{ s.direccion }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w100">
+                    <mat-label>Salon</mat-label>
+                    <mat-select name="sede" [(ngModel)]="estudiante.salon.salonId">
+                        <mat-option *ngFor="let s of salones" [value]="s.salonId">
+                            {{ s.grado }} / {{ s.seccion }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <div class="card-grid-2 align">
+                    <mat-slide-toggle [checked]="false" name="estado" [(ngModel)]="estudiante.estado" color="primary">
+                        Estado
+                    </mat-slide-toggle>
+                </div>
+
+                <div class="cont-center">
+                    <button mat-raised-button color="primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</mat-card>

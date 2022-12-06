@@ -1,1 +1,18 @@
-<p>view-cursos-x-estudiante works!</p>
+<div class="view-profesores">
+    <mat-card class="titulo-vista">
+        <mat-card-title>
+            Lista de Cursos Del Estudiante
+        </mat-card-title>
+    </mat-card>
+
+    <div class="card-grid-2">
+        <div class="card card-cursoVenta mb10" *ngFor="let c of cursosEstudiante">
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Profesor: </span>{{ c.profesorCurso.profesor.nombre }} {{ c.profesorCurso.profesor.apellido }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Curso: </span>{{ c.profesorCurso.curso.nombre }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Horas Semanales: </span>{{ c.profesorCurso.curso.horasSemanales }} Horas</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Nro. Celular: </span>{{ c.profesorCurso.profesor.celular }}</button>
+            <button mat-stroked-button color="primary" class="w100 btn-view"><span class="bold">Email: </span>{{ c.profesorCurso.profesor.email }}</button>
+            <button mat-raised-button color="primary" class="w100 btn-view-lista" [routerLink]="'/user/estudiantes/cursos/'+c.profesorCurso.profesorCursoId+'/estudiante/'+c.estudiante.estudianteId">Ver Notas</button>
+        </div>
+    </div>
+</div>

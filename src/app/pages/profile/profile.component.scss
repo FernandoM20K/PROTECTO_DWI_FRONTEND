@@ -1,0 +1,25 @@
+@import '_variables';
+@import '_cont-btn';
+@import '_globales';
+
+.profile-image {
+    max-width: 150px;
+    max-height: 150px;
+    border: 1px solid gainsboro;
+    border-radius: 50%;
+}
+
+.profile {
+    text-align: center;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table tr td {
+    padding: 15px 10px;
+    border: 2px solid gainsboro;
+}

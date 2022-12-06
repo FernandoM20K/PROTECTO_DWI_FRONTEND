@@ -1,0 +1,72 @@
+@import '_variables';
+@import '_mixins';
+
+.boton-azul {
+    @include boton($botonazul, block, 0);
+}
+
+.boton-verde {
+    @include boton($borde-btn-view, block, 0);
+}
+
+.boton-verde-inline {
+    @include boton($borde-btn-view, inline-block, 0);
+}
+
+.boton-rojo {
+    @include boton($btn-eliminar, block, 0);
+}
+/*
+.boton-menu {
+    @include boton($principal, block, 0);
+}
+
+.boton-morado {
+    @include boton($principal, block, 0);
+}
+
+.boton-transparente {
+    @include boton($principal, block, .5rem);
+    background: none;
+}
+
+.boton-azul-radio {
+    @include boton($botonazul, block, .5rem);
+}
+
+.boton-verde-radio {
+    @include boton($borde-btn-view, block, .5rem);
+}
+
+.boton-rojo-radio {
+    @include boton($btn-eliminar, block, .5rem);
+}
+
+.boton-verde-radio-inline {
+    @include boton($borde-btn-view, inline-block, .5rem);
+}
+
+.boton-rojo-radio-inline {
+    @include boton($btn-eliminar, inline-block, .5rem);
+}
+
+.boton-celeste-radio-inline {
+    @include boton($celestesuave, inline-block, .5rem);
+}
+
+.boton-salmon-radio-inline {
+    @include boton($ligthsalmon, inline-block, .5rem);
+}
+
+.boton-azul-radio-inline {
+    @include boton($botonazul, inline-block, .5rem);
+}
+
+.boton-yellowgreen-radio-inline {
+    @include boton($yellowGreen, inline-block, .5rem);
+}
+
+.boton-morado-radio-inline {
+    @include boton($principal, inline-block, .5rem);
+    padding: .5rem 1.4rem;
+}*/

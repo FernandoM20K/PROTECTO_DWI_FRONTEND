@@ -1,0 +1,13 @@
+@import '_variables';
+@import '_cont-btn';
+@import '_globales';
+
+.view-profesores {
+    position: relative;
+}
+
+.cont-btn-agregar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
