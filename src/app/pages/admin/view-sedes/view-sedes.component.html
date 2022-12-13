@@ -11,8 +11,8 @@
             <button mat-stroked-button color="primary" class="w100 btn-view mb10"><span class="bold">Dirección: </span>{{ s.direccion }}</button>
             <button mat-stroked-button color="primary" class="w100 btn-view mb10"><span class="bold">Teléfono: </span>{{ s.telefono }}</button>
             <button mat-raised-button color="primary" class="w100 mb10" [routerLink]="'/admin/sedes/'+s.sedeId">Actualizar</button>
-            <button mat-raised-button color="primary" class="w100 btn-view btn-view-green mb10" [routerLink]="'/admin/profesores/sede/'+s.sedeId">Listar Profesores</button>
-            <button mat-raised-button color="primary" class="w100 btn-view btn-view-green" [routerLink]="'/admin/salones/sede/'+s.sedeId">Listar Salones</button>
+            <button mat-raised-button color="primary" class="w100 btn-view-lista mb10" [routerLink]="'/admin/profesores/sede/'+s.sedeId">Listar Profesores</button>
+            <button mat-raised-button color="primary" class="w100 btn-view-lista" [routerLink]="'/admin/salones/sede/'+s.sedeId">Listar Salones</button>
         </div>
     </div>
 </div>
